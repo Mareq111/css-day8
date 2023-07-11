@@ -1,0 +1,185 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(220deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(25, 25, 42, 1) 34%);
+}
+
+/* general styling for 3 main bubles */
+
+.main-buble {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#first-buble {
+    width: 95px;
+    height: 95px;
+    background: rgb(253, 253, 253);
+    z-index: 1;
+    animation: first-buble 2s ease-in infinite;
+}
+
+#second-buble {
+    background: rgb(253, 253, 253);
+    z-index: 2;
+    width: 80px;
+    height: 100px;
+    animation: second-buble ease-in-out 4s infinite;
+}
+
+#third-buble {
+    background: rgb(253, 253, 253);
+    z-index: 0;
+    animation: third-buble 3s ease-in-out 1.5s infinite;
+}
+
+/* animations for main bubles */
+@keyframes first-buble {
+    0% {
+        transform: translateY(0px);
+    }
+
+    30% {
+        transform: translateY(15px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes second-buble {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    10% {
+        transform: translate(2px, -5px);
+    }
+
+    20% {
+        border-radius: 45%;
+        transform: translate(5px, -10px);
+        rotate: 75deg;
+    }
+
+    30% {
+        transform: translate(5px, -10px);
+        rotate: 95deg;
+    }
+
+    40% {
+        transform: translate(5px, -10px);
+        rotate: 125deg;
+    }
+
+    50% {
+        transform: translate(5px, -12px);
+        rotate: 165deg;
+    }
+
+    60% {
+        border-radius: 30%;
+        transform: translate(5px, 8px);
+        rotate: 195deg;
+    }
+
+    70% {
+        height: 90px;
+        transform: translate(5px, -12px);
+        rotate: 245deg;
+    }
+
+    80% {
+        border-radius: 50%;
+        transform: translate(5px, -8px);
+        rotate: 275deg;
+    }
+
+    90% {
+        transform: translate(5px, -10px);
+        rotate: 275deg;
+    }
+
+    100% {
+        transform: translate(2px, 2px);
+        rotate: 335deg;
+    }
+}
+
+@keyframes third-buble {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    10% {
+        transform: translate(2px, -5px);
+    }
+
+    20% {
+        border-radius: 45%;
+        transform: translate(5px, -11px);
+        rotate: 75deg;
+    }
+
+    30% {
+        transform: translate(5px, -12px);
+        rotate: 95deg;
+    }
+
+    40% {
+        transform: translate(5px, -12px);
+        rotate: 125deg;
+    }
+
+    50% {
+        transform: translate(5px, -8px);
+        rotate: 165deg;
+    }
+
+    60% {
+        border-radius: 40%;
+        transform: translate(5px, 9px);
+        rotate: 195deg;
+    }
+
+    70% {
+        height: 90px;
+        transform: translate(5px, -15px);
+        rotate: 245deg;
+    }
+
+    80% {
+        border-radius: 50%;
+        transform: translate(5px, -6px);
+        rotate: 275deg;
+    }
+
+    90% {
+        transform: translate(5px, -10px);
+        rotate: 275deg;
+    }
+
+    100% {
+        transform: translate(2px, 2px);
+        rotate: 335deg;
+    }
+}
