@@ -1,185 +1,378 @@
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 400px;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(220deg,
-            rgba(2, 0, 36, 1) 0%,
-            rgba(25, 25, 42, 1) 34%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    220deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(25, 25, 42, 1) 34%
+  );
 }
 
 /* general styling for 3 main bubles */
 
 .main-buble {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 #first-buble {
-    width: 95px;
-    height: 95px;
-    background: rgb(253, 253, 253);
-    z-index: 1;
-    animation: first-buble 2s ease-in infinite;
+  width: 95px;
+  height: 95px;
+  background: rgb(253, 253, 253);
+  animation: first-buble 2s ease-in 4s infinite;
 }
 
 #second-buble {
-    background: rgb(253, 253, 253);
-    z-index: 2;
-    width: 80px;
-    height: 100px;
-    animation: second-buble ease-in-out 4s infinite;
+  background: rgb(253, 253, 253);
+  width: 80px;
+  height: 100px;
+  animation: second-buble 2s ease-in-out 2s infinite;
 }
 
 #third-buble {
-    background: rgb(253, 253, 253);
-    z-index: 0;
-    animation: third-buble 3s ease-in-out 1.5s infinite;
+  background: rgb(253, 253, 253);
+  animation: third-buble 2s ease-in-out 3s infinite;
+}
+
+/* all small bubles */
+
+.small-bubles {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+#first-small-buble {
+  background: rgb(253, 253, 253);
+  width: 20px;
+  height: 20px;
+  animation: num-one-small-buble linear 3s infinite;
+}
+
+#second-small-buble {
+  background: rgb(253, 253, 253);
+  width: 20px;
+  height: 20px;
+  animation: num-two-small-buble linear 5s infinite;
+}
+
+#third-small-buble {
+  background: rgb(253, 253, 253);
+  width: 10px;
+  height: 10px;
+  animation: num-three-small-buble linear 5s infinite;
+}
+
+#fourth-small-buble {
+  background: rgb(253, 253, 253);
+  width: 22px;
+  height: 22px;
+  animation: num-four-small-buble linear 4s infinite;
+}
+
+#fifth-small-buble {
+  background: rgb(253, 253, 253);
+  width: 12px;
+  height: 12px;
+  animation: num-five-small-buble linear 4s infinite;
+}
+
+#sixth-small-buble {
+  background: rgb(253, 253, 253);
+  width: 8px;
+  height: 8px;
+  animation: num-six-small-buble linear 4s infinite;
+}
+
+#seventh-small-buble {
+  background: rgb(253, 253, 253);
+  width: 15px;
+  height: 15px;
+  animation: num-seven-small-buble ease-out 3.5s infinite;
+}
+
+#eighth-small-buble {
+  background: rgb(253, 253, 253);
+  width: 8px;
+  height: 8px;
+  animation: num-eight-small-buble ease-in 2s infinite;
+}
+
+#nineth-small-buble {
+  background: rgb(253, 253, 253);
+  width: 15px;
+  height: 15px;
+  animation: num-nine-small-buble ease-in-out 4s infinite;
+}
+
+#ten-small-buble {
+  background: rgb(253, 253, 253);
+  width: 8px;
+  height: 8px;
+  animation: num-ten-small-buble ease-in-out 4s infinite;
 }
 
 /* animations for main bubles */
 @keyframes first-buble {
-    0% {
-        transform: translateY(0px);
-    }
+  0% {
+    transform: translateY(0px);
+  }
 
-    30% {
-        transform: translateY(15px);
-    }
+  30% {
+    transform: translateY(15px);
+  }
 
-    60% {
-        transform: translateY(-15px);
-    }
+  60% {
+    transform: translateY(-15px);
+  }
 
-    100% {
-        transform: translateY(0px);
-    }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes second-buble {
-    0% {
-        transform: translate(0px, 0px);
-    }
+  0% {
+    transform: translate(0px, 0px);
+  }
 
-    10% {
-        transform: translate(2px, -5px);
-    }
+  10% {
+    transform: translate(2px, -5px);
+  }
 
-    20% {
-        border-radius: 45%;
-        transform: translate(5px, -10px);
-        rotate: 75deg;
-    }
+  20% {
+    border-radius: 45%;
+    transform: translate(5px, -10px);
+    rotate: 75deg;
+  }
 
-    30% {
-        transform: translate(5px, -10px);
-        rotate: 95deg;
-    }
+  30% {
+    transform: translate(5px, -10px);
+    rotate: 95deg;
+  }
 
-    40% {
-        transform: translate(5px, -10px);
-        rotate: 125deg;
-    }
+  40% {
+    transform: translate(5px, -10px);
+    rotate: 125deg;
+  }
 
-    50% {
-        transform: translate(5px, -12px);
-        rotate: 165deg;
-    }
+  50% {
+    transform: translate(5px, -12px);
+    rotate: 165deg;
+  }
 
-    60% {
-        border-radius: 30%;
-        transform: translate(5px, 8px);
-        rotate: 195deg;
-    }
+  60% {
+    border-radius: 30%;
+    transform: translate(5px, 8px);
+    rotate: 195deg;
+  }
 
-    70% {
-        height: 90px;
-        transform: translate(5px, -12px);
-        rotate: 245deg;
-    }
+  70% {
+    height: 90px;
+    transform: translate(5px, -12px);
+    rotate: 245deg;
+  }
 
-    80% {
-        border-radius: 50%;
-        transform: translate(5px, -8px);
-        rotate: 275deg;
-    }
+  80% {
+    border-radius: 50%;
+    transform: translate(5px, -8px);
+    rotate: 275deg;
+  }
 
-    90% {
-        transform: translate(5px, -10px);
-        rotate: 275deg;
-    }
+  90% {
+    transform: translate(5px, -10px);
+    rotate: 275deg;
+  }
 
-    100% {
-        transform: translate(2px, 2px);
-        rotate: 335deg;
-    }
+  100% {
+    transform: translate(2px, 2px);
+    rotate: 335deg;
+  }
 }
 
 @keyframes third-buble {
-    0% {
-        transform: translate(0px, 0px);
-    }
+  0% {
+    transform: translate(0px, 0px);
+  }
 
-    10% {
-        transform: translate(2px, -5px);
-    }
+  10% {
+    transform: translate(2px, -5px);
+  }
 
-    20% {
-        border-radius: 45%;
-        transform: translate(5px, -11px);
-        rotate: 75deg;
-    }
+  20% {
+    border-radius: 45%;
+    transform: translate(5px, -11px);
+    rotate: 75deg;
+  }
 
-    30% {
-        transform: translate(5px, -12px);
-        rotate: 95deg;
-    }
+  30% {
+    transform: translate(5px, -12px);
+    rotate: 95deg;
+  }
 
-    40% {
-        transform: translate(5px, -12px);
-        rotate: 125deg;
-    }
+  40% {
+    transform: translate(5px, -12px);
+    rotate: 125deg;
+  }
 
-    50% {
-        transform: translate(5px, -8px);
-        rotate: 165deg;
-    }
+  50% {
+    transform: translate(5px, -8px);
+    rotate: 165deg;
+  }
 
-    60% {
-        border-radius: 40%;
-        transform: translate(5px, 9px);
-        rotate: 195deg;
-    }
+  60% {
+    border-radius: 40%;
+    transform: translate(5px, 9px);
+    rotate: 195deg;
+  }
 
-    70% {
-        height: 90px;
-        transform: translate(5px, -15px);
-        rotate: 245deg;
-    }
+  70% {
+    height: 90px;
+    transform: translate(5px, -15px);
+    rotate: 245deg;
+  }
 
-    80% {
-        border-radius: 50%;
-        transform: translate(5px, -6px);
-        rotate: 275deg;
-    }
+  80% {
+    border-radius: 50%;
+    transform: translate(5px, -6px);
+    rotate: 275deg;
+  }
 
-    90% {
-        transform: translate(5px, -10px);
-        rotate: 275deg;
-    }
+  90% {
+    transform: translate(5px, -10px);
+    rotate: 275deg;
+  }
 
-    100% {
-        transform: translate(2px, 2px);
-        rotate: 335deg;
-    }
+  100% {
+    transform: translate(2px, 2px);
+    rotate: 335deg;
+  }
+}
+
+/* small bubles animations */
+@keyframes num-one-small-buble {
+  0% {
+    transform: translate(200px, -95px);
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes num-two-small-buble {
+  0% {
+    transform: translate(227px, 40px);
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes num-three-small-buble {
+  0% {
+    transform: translate(20px, -195px);
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: -360deg;
+    transform: scale(2.5);
+  }
+}
+
+@keyframes num-four-small-buble {
+  0% {
+    transform: translate(200px, 195px);
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: -360deg;
+  }
+}
+
+@keyframes num-five-small-buble {
+  0% {
+    transform: translate(90px, -200px);
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+    transform: scale(2);
+  }
+}
+
+@keyframes num-six-small-buble {
+  0% {
+    transform: translate(190px, -50px);
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: -360deg;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes num-seven-small-buble {
+  0% {
+    transform: translate(220px, -110px);
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: -360deg;
+  }
+}
+
+@keyframes num-eight-small-buble {
+  0% {
+    transform: translate(200px, -100px);
+    rotate: -360deg;
+  }
+
+  100% {
+    rotate: 0deg;
+    transform: scale(2);
+  }
+}
+
+@keyframes num-nine-small-buble {
+  0% {
+    transform: translate(150px, -250px);
+    rotate: 360deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
+
+@keyframes num-ten-small-buble {
+  0% {
+    transform: translate(250px, -60px);
+    rotate: 180deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
 }
